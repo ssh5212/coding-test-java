@@ -15,13 +15,16 @@
 # ANIMAL_INS에 없는 동물은 유실된 것임
 
 
-select O.ANIMAL_ID, O.NAME
-select I.NAME, O.NAME
-from ANIMAL_INS I right join ANIMAL_OUTS O
-    on I.NAME = O.NAME
+# select O.ANIMAL_ID, O.NAME
+# select I.NAME, O.NAME
+# from ANIMAL_INS I right join ANIMAL_OUTS O
+#     on I.NAME = O.NAME
 #where I.NAME is null;
 
 # select *
-# from ANIMAL_INS 
+# from ANIMAL_INS
 
-
+select ANIMAL_ID,	NAME
+from ANIMAL_OUTS
+where 1
+and ANIMAL_ID not in ( select ANIMAL_ID from ANIMAL_INS)
