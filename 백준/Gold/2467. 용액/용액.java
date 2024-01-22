@@ -33,7 +33,7 @@ public class Main {
 			}
 			
 			// 결과가 양수인 경우 rt를 왼쪽으로 이동
-			if (now >= 0) {
+			if (now > 0) {
 				rt--;
 			}
 
@@ -41,6 +41,10 @@ public class Main {
 			else if (now < 0) {
 				lt++;
 			} 
+			
+			else {
+				break;
+			}
 
 			
 		}
